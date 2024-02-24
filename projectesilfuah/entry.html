@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>entry</title>
+        <style>
+            body{
+                font-family: 'Sans';
+                margin: 0;
+                padding: 0;
+            }
+            input{
+                font-family: 'Sans';
+            }
+            a{
+                cursor: pointer;
+            }
+            a:hover{
+                color: burlywood;
+            }
+            p{
+                margin: 0;
+            }
+            button{
+                font-family: 'Sans';
+            }
+            h3{
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                color: white;
+                font-size: 180%;
+            }
+            .nav-bar{
+                display: flex;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .nav-bar img{
+                width: 60px;
+                height: 60px;
+            }
+            .nav-bar div{
+                font-size: large;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            .nav-bar div>img{
+                width: 20px;
+                height: 20px;
+            }
+            .links{
+                list-style: none;
+                display: flex;
+                gap: 50px;
+            }
+            .front-view{
+                width: 100%;
+                padding-top: 5vh;
+                display: flex;
+                height: 70vh;
+                
+                background-image: url(hero-banner.jpg);
+                flex-direction: column;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: rgba(0, 0, 0, 0.6);
+                background-blend-mode: color;
+                align-items: center;
+                color: white;
+            }
+            .front-view  h1{
+                font-size: 40px;
+                height: 10%;
+            }
+            .front-view p{
+                height: 50%;
+            }
+            .search-box{
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                padding: 20px 40px 20px 40px;
+                background-color: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-radius: 30px;
+            }
+            .search-box img{
+                height: 30px;
+                width: 30px;
+            }
+            .search-box div{
+               position: relative;
+               width: 400px;
+               display: flex;
+               align-items: center;
+               padding-left: 5%;
+               height: 50px;
+            }
+            .search-box div>input{
+               position: absolute;
+               background-color: rgb(222, 184, 135,0.4); 
+               left: 0;
+               right: 0;
+               bottom: 0;
+               height: 94%;
+               color: white;
+               caret-color: white;
+               border-radius: 20px;
+               padding-right: 20px;
+               padding-left: 20%;
+               font-size: 20px;
+               border: 1px solid gray;
+            }
+            .search-box button{
+                border-radius: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                height: 50px;
+                font-size: 17px;
+                border: 1px solid gray;
+                cursor: pointer;
+                background-color: burlywood;
+            }
+            .front-view span{
+                margin-top: 7vh;
+                height: 20%;
+                color: burlywood;
+            }
+            .infos{
+                display: grid;
+                gap: 5vh;
+                padding-top: 7vh;
+                background-color: rgb(60, 63, 120);
+                padding-bottom: 7vh;
+            }
+            .news-holder{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 5vh;
+                padding: 0px 42px 0px 42px;
+            }
+            .news-holder > *{
+                justify-self: center;
+                height: 40vh;
+            }
+            .news-card1,.news-card2,.news-card3,.news-card4,.news-card5,.news-card6{
+                display: flex;
+                background-position: center center;
+                background-size: cover;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.4);
+                background-blend-mode: color;
+                width: 100%;
+                border-radius: 10px;
+                contain: paint;
+            }
+            .news-card1{
+                background-image: url(pexels-adrien-casse-19550021.jpg);
+            }
+            .news-card2{
+                background-image: url(pexels-julia-sakelli-905485.jpg);
+            }
+            .news-card3{
+                background-image: url(pexels-karolina-grabowska-4386372.jpg);
+            }
+            .news-card4{
+                background-image: url(pexels-pixabay-247819.jpg);
+            }
+            .news-card5{
+                background-image: url(pexels-pixabay-73869.jpg);
+            }
+            .news-card6{
+                background-image: url(pexels-nastyasensei-335393.jpg);
+            }
+            .news-card1 div,.news-card2 div,.news-card3 div,.news-card4 div,.news-card5 div,.news-card6 div{
+                align-self: end;
+                background-color: white;
+                color: black;
+                width: 95%;
+                text-align: left;
+                padding: 0px 10px 0px 10px;
+            }
+            .news-card p{
+                max-lines: 0;
+            }
+            .about{
+                background-color: burlywood;
+            }
+            @font-face {
+                font-family: 'Sans';
+                src: url(WorkSans-VariableFont_wght.ttf);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar">
+                <img src="encyclopedia.png" alt="">
+                <ul class="links">
+                    <li><a>New Page</a></li>
+                    <li><a>Edit Page</a></li>
+                    <li><a>Random Page</a></li>
+                </ul>
+                <div>Explore <img src="down-arrow-backup-2-svgrepo-com.svg" alt=""></div>
+            </nav>
+        </header>
+        <main>
+            <section class="front-view">
+                <h1>GHANA'S ONLINE ENCYCLOPEDIA</h1>
+                <p>Providing information to millions across the world</p>
+                <div class="search-box">
+                    <div>
+                        <img src="search-alt-svgrepo-com.svg" alt="">
+                        <input type="text">
+                    </div>
+                    <button>Search</button>
+                </div>
+                <span>Scroll down if you want to view more resource</span>
+            </section>
+            <section class="infos">
+                <h3>Top Searches</h3>
+                <div class="news-holder">
+                    <div class="news-card1"> 
+                        <div><p><span style="color: rgb(31, 38, 180);">PYRENEES:</span>&nbsp;Pyrenees, Spain. Pirieos, Fr.</p></div>
+                    </div><div class="news-card2"> 
+                        <div><p><span style="color: rgb(31, 38, 180); ">BOSTON TEA PARTY:</span>&nbsp;US ministries over the world</p></div>
+                    </div><div class="news-card3"> 
+                        <div><p><span style="color: rgb(31, 38, 180);">INCOME TAX</span>&nbsp;Income tax assessment levied......</p></div>
+                    </div><div class="news-card4"> 
+                        <div><p><span style="color: rgb(31, 38, 180);">pneumonoultramicroscopicsilicovolcanoconiosis:</span>&nbsp;longest word</p></div>
+                    </div><div class="news-card5"> 
+                        <div><p><span style="color: rgb(31, 38, 180);">Russia:</span>&nbsp;largest country in the world</p></div>
+                    </div><div class="news-card6"> 
+                        <div><p><span style="color: rgb(31, 38, 180);">195 countries:</span>&nbsp;total number of countries in the world</p></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+    </body>
+</html>
